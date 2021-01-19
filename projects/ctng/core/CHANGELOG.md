@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.1 (2021-01-19)
+
+**Note:** Version bump only for package @ctng/core
+
+
+
+
+
 # [5.0.0](https://codetrust.visualstudio.com/Angular%20Libraries/_git/ctng/compare/v4.4.0...v5.0.0) (2020-07-29)
 
 

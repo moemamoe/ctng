@@ -4,7 +4,7 @@
     "projects/*",
     "projects/ctng/*"
   ],
-  "version": "5.0.0",
+  "version": "5.0.1",
   "command": {
     "version": {
       "allowBranch": "master"
