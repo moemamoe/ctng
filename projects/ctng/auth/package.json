@@ -1,0 +1,17 @@
+{
+  "name": "@ctng/auth",
+  "version": "5.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@ctng/core": "^5.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moemamoe/ctng.git",
+    "directory": "projects/ctng/auth"
+  }
+}

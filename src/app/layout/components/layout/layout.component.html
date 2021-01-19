@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+  <mat-sidenav [fixedInViewport]="true" #sidenav class="navigation" mode="side" position="start">
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="layout">
+      <div class="header">
+        <app-toolbar (menuToggle)="sidenav.toggle()"></app-toolbar>
+      </div>
+      <div class="content l-side-padding">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

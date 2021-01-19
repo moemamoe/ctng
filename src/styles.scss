@@ -1,0 +1,37 @@
+// Reset and base files
+// --------------------
+@import './scss/base/reset.scss';
+@import './scss/base/base.scss';
+
+// Fonts
+// -------
+@import './scss/fonts';
+
+// Material Theme
+// -------
+@import './scss/material-theme.scss';
+@import './scss/material-typography.scss';
+
+// Layouts
+// -------
+@import './scss/layouts/l-side-padding.scss';
+@import './scss/layouts/l-top-spacing.scss';
+@import './scss/layouts/l-bottom-spacing.scss';
+
+// Overrides
+// -------
+@import './scss/overrides.scss';
+
+@import '../../projects/ctng/common/src/lib/scss/_theme';
+
+$config: (
+  primary: red
+);
+
+$config2: (
+  primary: green
+);
+
+@include ct-theme();
+@include ct-loading-bar($config);
+@include ct-loading-spinner($config2);

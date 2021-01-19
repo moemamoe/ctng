@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../../dist/ctng/auth-jwt-ls",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "jwt-decode": "jwt-decode",
+      "@ctng/core": "@ctng/core"
+    }
+  }
+}

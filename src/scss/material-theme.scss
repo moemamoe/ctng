@@ -1,0 +1,107 @@
+@import '~@angular/material/theming';
+@import 'scss/_colors';
+@import 'scss/helpers/_map-helpers';
+
+/**
+* MATERIAL CORE FUNCTION: ONLY INCLUDE ONCE!
+*/
+@include mat-core();
+
+/**
+* CUSTOM COLORS
+*/
+$mainColor: get-map-value($theme-colors, primary);
+$textColor: get-map-value($text-colors, forth);
+$error: get-map-value($theme-colors, error);
+
+/**
+* MATERIAL COLOR PALETTES
+*/
+$mat-theme: (
+  50: #e7e7f2,
+  100: #c2c4dd,
+  200: #9a9dc7,
+  300: #7275b1,
+  400: #5358a0,
+  500: $mainColor,
+  600: #303487,
+  700: #282c7c,
+  800: #222572,
+  900: #161860,
+  A100: #9a9dff,
+  A200: #676bff,
+  A400: #343aff,
+  A700: #1a21ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: $textColor,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$mat-error: (
+  50: #ffffff,
+  100: #f8dcdc,
+  200: #eeaeae,
+  300: #e27373,
+  400: #dc5959,
+  500: $error,
+  600: #cd2b2b,
+  700: #b42626,
+  800: #9b2020,
+  900: #811b1b,
+  A100: #ffffff,
+  A200: #fdb3b3,
+  A400: #ed5d5d,
+  A700: #e15050,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: $textColor,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff,
+  ),
+);
+
+/**
+* MATERIAL THEME CREATION
+*/
+$primary: mat-palette($mat-theme);
+$accent: mat-palette($mat-theme);
+$warn: mat-palette($mat-error);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+/**
+* MATERIAL COMPONENTS
+*/
+@include mat-core-theme($theme);
+@include mat-button-theme($theme);
+@include mat-checkbox-theme($theme);
+@include mat-radio-theme($theme);
+@include mat-input-theme($theme);
+@include mat-select-theme($theme);
+@include mat-datepicker-theme($theme);
+@include mat-form-field-theme($theme);
+@include mat-snack-bar-theme($theme);
+@include mat-dialog-theme($theme);
+@include mat-autocomplete-theme($theme);

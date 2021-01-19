@@ -1,0 +1,16 @@
+<div markdown [src]="'assets/ctng/localization/README.md'"></div>
+
+<div class="playground-container">
+  <h2>Playground</h2>
+  <div class="playground">
+    <span>Strings</span>
+    <p>{{ 'TEST' | translate }}</p>
+    <span>Dates</span>
+    <p ctDateFormat [date]="now"></p>
+    <span>ToDo</span>
+    <p>CurrencyPipe, DecimalPipe and PercentPipe</p>
+
+    <button mat-raised-button (click)="german()">German</button>
+    <button mat-raised-button (click)="english()">English</button>
+  </div>
+</div>

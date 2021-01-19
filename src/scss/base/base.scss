@@ -1,0 +1,152 @@
+@import './../helpers/breakpoints';
+@import './../helpers/colors';
+@import './../typography';
+
+// hmtl/body and global stuff
+// ---------------------------------
+
+/*
+When setting the primary font stack, apply it to the Pure grid units along
+with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use
+specific font stacks to ensure the greatest OS/browser compatibility.
+See https://purecss.io/grids/#using-grids-with-custom-fonts for more details.
+*/
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*='pure-u'] {
+  font-family: $primary;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  color: text-color(primary);
+  line-height: $font-line-height;
+
+  @include min(sm) {
+    font-size: $html-font-size-md;
+  }
+  @include min(md) {
+    font-size: $html-font-size-lg;
+  }
+  @include min(lg) {
+    font-size: $html-font-size-xl;
+  }
+  @include min(xl) {
+    font-size: $html-font-size;
+  }
+}
+
+svg {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: theme-color(background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Set Image and Objects to have a max-width of 100%
+// ---------------------------------
+embed,
+iframe,
+img,
+object,
+video {
+  max-width: 100%;
+}
+
+// Headings
+// ---------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $primary;
+}
+
+h1 {
+  font-size: $font-size-h1;
+  line-height: $font-line-height-h1;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+h3 {
+  font-size: $font-size-h3;
+  margin-bottom: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+h4 {
+  font-size: $font-size-h4;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+// All text based stuff
+// ---------------------------------
+
+ul {
+  padding-left: 1rem;
+
+  li {
+    padding-bottom: 0.5rem;
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+
+  li:first-child {
+    padding-top: 1rem;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p,
+a,
+li,
+pre,
+code,
+div {
+  font-size: $font-size-normal;
+}
+
+code {
+  background-color: #e2e2e2;
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: black;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.playground {
+  padding: 0.25rem 1rem;
+  min-height: 300px;
+  background-color: theme-color(backgroundsecond);
+}

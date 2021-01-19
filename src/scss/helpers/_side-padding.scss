@@ -1,0 +1,106 @@
+@import './../page';
+@import './breakpoints';
+
+// Get the min side padding for a min size
+// 0 = all
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin min-side-padding($minSize: 0) {
+  @if ($minSize == 0) {
+    padding-right: $side-padding-sm;
+    padding-left: $side-padding-sm;
+  }
+
+  @if ($minSize <= 1) {
+    @include min(sm) {
+      padding-right: $side-padding-md;
+      padding-left: $side-padding-md;
+    }
+  }
+
+  @if ($minSize <= 2) {
+    @include min(md) {
+      padding-right: $side-padding-lg;
+      padding-left: $side-padding-lg;
+    }
+  }
+
+  @if ($minSize <= 3) {
+    @include min(lg) {
+      padding-right: $side-padding-xl;
+      padding-left: $side-padding-xl;
+    }
+  }
+
+  @if ($minSize <= 4) {
+    @include min(xl) {
+      padding-right: $side-padding;
+      padding-left: $side-padding;
+    }
+  }
+}
+
+// Get the max side padding for a max size
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin max-side-padding($maxSize) {
+  @if ($maxSize >= 4) {
+    @include max(xl) {
+      padding-right: $side-padding-xl;
+      padding-left: $side-padding-xl;
+    }
+  }
+
+  @if ($maxSize >= 3) {
+    @include max(lg) {
+      padding-right: $side-padding-lg;
+      padding-left: $side-padding-lg;
+    }
+  }
+
+  @if ($maxSize >= 2) {
+    @include max(md) {
+      padding-right: $side-padding-md;
+      padding-left: $side-padding-md;
+    }
+  }
+
+  @if ($maxSize >= 1) {
+    @include max(sm) {
+      padding-right: $side-padding-sm;
+      padding-left: $side-padding-sm;
+    }
+  }
+}
+
+// Get the min-max side padding for a min and max size
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin min-max-side-padding($minSize, $maxSize) {
+  @if ($minSize <= 1 and $maxSize >= 2) {
+    @include min-max(sm, md) {
+      padding-right: $side-padding-md;
+      padding-left: $side-padding-md;
+    }
+  }
+
+  @if ($minSize <= 2 and $maxSize >= 3) {
+    @include min-max(md, lg) {
+      padding-right: $side-padding-lg;
+      padding-left: $side-padding-lg;
+    }
+  }
+
+  @if ($minSize <= 3 and $maxSize >= 4) {
+    @include min-max(lg, xl) {
+      padding-right: $side-padding-xl;
+      padding-left: $side-padding-xl;
+    }
+  }
+}

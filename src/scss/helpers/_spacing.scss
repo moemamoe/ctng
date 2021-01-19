@@ -1,0 +1,184 @@
+@import './../page';
+@import './breakpoints';
+
+// Get the min top spacing for a min size
+// 0 = all
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin min-top-spacing($minSize: 0, $factor: 1) {
+  @if ($minSize == 0) {
+    padding-top: $top-spacing-sm * $factor;
+  }
+
+  @if ($minSize <= 1) {
+    @include min(sm) {
+      padding-top: $top-spacing-md * $factor;
+    }
+  }
+
+  @if ($minSize <= 2) {
+    @include min(md) {
+      padding-top: $top-spacing-lg * $factor;
+    }
+  }
+
+  @if ($minSize <= 3) {
+    @include min(lg) {
+      padding-top: $top-spacing-xl * $factor;
+    }
+  }
+
+  @if ($minSize <= 4) {
+    @include min(xl) {
+      padding-top: $top-spacing * $factor;
+    }
+  }
+}
+
+// Min top spacing with small factor
+// ---------------------------------
+@mixin min-top-spacing-s($minSize: 0) {
+  @include min-top-spacing($minSize, $spacing-s-factor);
+}
+
+// Min top spacing with large factor
+// ---------------------------------
+@mixin min-top-spacing-l($minSize: 0) {
+  @include min-top-spacing($minSize, $spacing-l-factor);
+}
+
+// Get the max top spacing for a max size
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin max-top-spacing($maxSize: 0, $factor: 1) {
+  @if ($maxSize >= 4) {
+    @include max(xl) {
+      padding-top: $top-spacing-xl * $factor;
+    }
+  }
+
+  @if ($maxSize >= 3) {
+    @include max(lg) {
+      padding-top: $top-spacing-lg * $factor;
+    }
+  }
+
+  @if ($maxSize >= 2) {
+    @include max(md) {
+      padding-top: $top-spacing-md * $factor;
+    }
+  }
+
+  @if ($maxSize >= 1) {
+    @include max(sm) {
+      padding-top: $top-spacing-sm * $factor;
+    }
+  }
+}
+
+// Max top spacing with small factor
+// ---------------------------------
+@mixin max-top-spacing-s($maxSize: 0) {
+  @include max-top-spacing($maxSize, $spacing-s-factor);
+}
+
+// Max top spacing with large factor
+// ---------------------------------
+@mixin max-top-spacing-l($maxSize: 0) {
+  @include max-top-spacing($maxSize, $spacing-l-factor);
+}
+
+// Get the min bottom spacing for a min size
+// 0 = all
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin min-bottom-spacing($minSize: 0, $factor: 1) {
+  @if ($minSize == 0) {
+    padding-bottom: $bottom-spacing-sm * $factor;
+  }
+
+  @if ($minSize <= 1) {
+    @include min(sm) {
+      padding-bottom: $bottom-spacing-md * $factor;
+    }
+  }
+
+  @if ($minSize <= 2) {
+    @include min(md) {
+      padding-bottom: $bottom-spacing-lg * $factor;
+    }
+  }
+
+  @if ($minSize <= 3) {
+    @include min(lg) {
+      padding-bottom: $bottom-spacing-xl * $factor;
+    }
+  }
+
+  @if ($minSize <= 4) {
+    @include min(xl) {
+      padding-bottom: $bottom-spacing * $factor;
+    }
+  }
+}
+
+// Min bottom spacing with small factor
+// ---------------------------------
+@mixin min-bottom-spacing-s($minSize: 0) {
+  @include min-bottom-spacing($minSize, $spacing-s-factor);
+}
+
+// Min bottom spacing with large factor
+// ---------------------------------
+@mixin min-bottom-spacing-l($minSize: 0) {
+  @include min-bottom-spacing($minSize, $spacing-l-factor);
+}
+
+// Get the max bottom spacing for a max size
+// 1 = sm
+// 2 = md
+// 3 = lg
+// 4 = xl
+@mixin max-bottom-spacing($maxSize: 0, $factor: 1) {
+  @if ($maxSize >= 4) {
+    @include max(xl) {
+      padding-bottom: $bottom-spacing-xl * $factor;
+    }
+  }
+
+  @if ($maxSize >= 3) {
+    @include max(lg) {
+      padding-bottom: $bottom-spacing-lg * $factor;
+    }
+  }
+
+  @if ($maxSize >= 2) {
+    @include max(md) {
+      padding-bottom: $bottom-spacing-md * $factor;
+    }
+  }
+
+  @if ($maxSize >= 1) {
+    @include max(sm) {
+      padding-bottom: $bottom-spacing-sm * $factor;
+    }
+  }
+}
+
+// Max bottom spacing with small factor
+// ---------------------------------
+@mixin max-bottom-spacing-s($maxSize: 0) {
+  @include max-bottom-spacing($maxSize, $spacing-s-factor);
+}
+
+// Max bottom spacing with large factor
+// ---------------------------------
+@mixin max-bottom-spacing-l($maxSize: 0) {
+  @include max-bottom-spacing($maxSize, $spacing-l-factor);
+}

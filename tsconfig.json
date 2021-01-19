@@ -1,0 +1,59 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./src/tsconfig.app.json"
+    },
+    {
+      "path": "./src/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/core/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/core/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/common/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/common/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/wordpress/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/wordpress/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/testing/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/testing/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/auth/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/auth/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/localization/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/localization/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/ctng/auth-jwt-ls/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/ctng/auth-jwt-ls/tsconfig.spec.json"
+    }
+  ]
+}

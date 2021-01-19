@@ -1,0 +1,123 @@
+@import './../helpers/spacing';
+
+// The normal side padding for all sizes
+// -------------------------------------
+.l-bottom-spacing {
+  @include min-bottom-spacing();
+}
+
+// The small bottom spacing multiplicated with small factor
+// ---------------------------------------------------------
+.l-bottom-spacing-s {
+  @include min-bottom-spacing-s();
+}
+
+.l-bottom-spacing-s-min-sm {
+  @include min-bottom-spacing-s(1);
+}
+
+.l-bottom-spacing-s-min-md {
+  @include min-bottom-spacing-s(2);
+}
+
+.l-bottom-spacing-s-min-lg {
+  @include min-bottom-spacing-s(3);
+}
+
+.l-bottom-spacing-s-min-xl {
+  @include min-bottom-spacing-s(4);
+}
+
+// The large bottom spacing multiplicated with small factor
+// ---------------------------------------------------------
+.l-bottom-spacing-l {
+  @include min-bottom-spacing-l();
+}
+
+.l-bottom-spacing-l-min-sm {
+  @include min-bottom-spacing-l(1);
+}
+
+.l-bottom-spacing-l-min-md {
+  @include min-bottom-spacing-l(2);
+}
+
+.l-bottom-spacing-l-min-lg {
+  @include min-bottom-spacing-l(3);
+}
+
+.l-bottom-spacing-l-min-xl {
+  @include min-bottom-spacing-l(4);
+}
+
+// The min side paddings
+// --------------------
+.l-bottom-spacing-min-sm {
+  @include min-bottom-spacing(1);
+}
+
+.l-bottom-spacing-min-md {
+  @include min-bottom-spacing(2);
+}
+
+.l-bottom-spacing-min-lg {
+  @include min-bottom-spacing(3);
+}
+
+.l-bottom-spacing-min-xl {
+  @include min-bottom-spacing(4);
+}
+
+// The max normal bottom spacing side paddings
+// --------------------
+.l-bottom-spacing-max-sm {
+  @include max-bottom-spacing(1);
+}
+
+.l-bottom-spacing-max-md {
+  @include max-bottom-spacing(2);
+}
+
+.l-bottom-spacing-max-lg {
+  @include max-bottom-spacing(3);
+}
+
+.l-bottom-spacing-max-xl {
+  @include max-bottom-spacing(4);
+}
+
+// The max small bottom spacing side paddings
+// --------------------
+.l-bottom-spacing-s-max-sm {
+  @include max-bottom-spacing-s(1);
+}
+
+.l-bottom-spacing-s-max-md {
+  @include max-bottom-spacing-s(2);
+}
+
+.l-bottom-spacing-s-max-lg {
+  @include max-bottom-spacing-s(3);
+}
+
+.l-bottom-spacing-s-max-xl {
+  @include max-bottom-spacing-s(4);
+}
+
+// The max large bottom spacing
+// --------------------
+.l-bottom-spacing-l-max-sm {
+  @include max-bottom-spacing-l(1);
+}
+
+.l-bottom-spacing-l-max-md {
+  @include max-bottom-spacing-l(2);
+}
+
+.l-bottom-spacing-l-max-lg {
+  @include max-bottom-spacing-l(3);
+}
+
+.l-bottom-spacing-l-max-xl {
+  @include max-bottom-spacing-l(4);
+}

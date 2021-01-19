@@ -1,0 +1,42 @@
+@import './../../../../../scss/helpers/colors';
+
+.pages {
+  display: flex;
+  height: 6rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: theme-color(backgroundsecond);
+
+  button {
+    height: 3rem;
+  }
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 16px;
+  background-color: #424242;
+
+  input {
+    color: white;
+  }
+}
+
+.login__form {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.login__form__field {
+  padding: 5px 0;
+}
+
+.warn-button {
+  margin-top: 1rem;
+}

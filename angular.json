@@ -1,0 +1,404 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ctng-app": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "aot": true,
+            "outputPath": "dist/ctng-app",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss",
+              "src/assets/icons/material-icons.css",
+              "node_modules/prismjs/themes/prism-okaidia.css"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/scss"
+              ]
+            },
+            "scripts": [
+              "node_modules/marked/lib/marked.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/components/prism-css.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ctng-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ctng-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ctng-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/scss"
+              ]
+            },
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ctng/core": {
+      "root": "projects/ctng/core",
+      "sourceRoot": "projects/ctng/core/src",
+      "projectType": "library",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/core/tsconfig.lib.json",
+            "project": "projects/ctng/core/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/core/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/core/src/test.ts",
+            "tsConfig": "projects/ctng/core/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/core/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ctng/core/tsconfig.lib.json",
+              "projects/ctng/core/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ctng/common": {
+      "root": "projects/ctng/common",
+      "sourceRoot": "projects/ctng/common/src",
+      "projectType": "library",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/common/tsconfig.lib.json",
+            "project": "projects/ctng/common/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/common/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/common/src/test.ts",
+            "tsConfig": "projects/ctng/common/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/common/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ctng/common/tsconfig.lib.json",
+              "projects/ctng/common/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ctng/wordpress": {
+      "root": "projects/ctng/wordpress",
+      "sourceRoot": "projects/ctng/wordpress/src",
+      "projectType": "library",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/wordpress/tsconfig.lib.json",
+            "project": "projects/ctng/wordpress/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/wordpress/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/wordpress/src/test.ts",
+            "tsConfig": "projects/ctng/wordpress/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/wordpress/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ctng/wordpress/tsconfig.lib.json",
+              "projects/ctng/wordpress/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ctng/testing": {
+      "projectType": "library",
+      "root": "projects/ctng/testing",
+      "sourceRoot": "projects/ctng/testing/src",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/testing/tsconfig.lib.json",
+            "project": "projects/ctng/testing/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/testing/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/testing/src/test.ts",
+            "tsConfig": "projects/ctng/testing/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/testing/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ctng/testing/tsconfig.lib.json",
+              "projects/ctng/testing/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "@ctng/auth": {
+      "projectType": "library",
+      "root": "projects/ctng/auth",
+      "sourceRoot": "projects/ctng/auth/src",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/auth/tsconfig.lib.json",
+            "project": "projects/ctng/auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/auth/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/auth/src/test.ts",
+            "tsConfig": "projects/ctng/auth/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/ctng/auth/tsconfig.lib.json",
+              "projects/ctng/auth/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "@ctng/localization": {
+      "projectType": "library",
+      "root": "projects/ctng/localization",
+      "sourceRoot": "projects/ctng/localization/src",
+      "prefix": "ct",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/localization/tsconfig.lib.json",
+            "project": "projects/ctng/localization/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/localization/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/localization/src/test.ts",
+            "tsConfig": "projects/ctng/localization/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/localization/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["projects/ctng/localization/tsconfig.lib.json", "projects/ctng/localization/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "@ctng/auth-jwt-ls": {
+      "projectType": "library",
+      "root": "projects/ctng/auth-jwt-ls",
+      "sourceRoot": "projects/ctng/auth-jwt-ls/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ctng/auth-jwt-ls/tsconfig.lib.json",
+            "project": "projects/ctng/auth-jwt-ls/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ctng/auth-jwt-ls/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ctng/auth-jwt-ls/src/test.ts",
+            "tsConfig": "projects/ctng/auth-jwt-ls/tsconfig.spec.json",
+            "karmaConfig": "projects/ctng/auth-jwt-ls/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ctng/auth-jwt-ls/tsconfig.lib.json",
+              "projects/ctng/auth-jwt-ls/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ctng-app"
+}

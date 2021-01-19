@@ -1,0 +1,49 @@
+@import './../helpers/side-padding';
+
+// The normal side padding for all sizes
+// -------------------------------------
+.l-side-padding {
+  @include min-side-padding();
+}
+
+// The min side paddings
+// --------------------
+.l-side-padding-min-sm {
+  @include min-side-padding(1);
+}
+
+.l-side-padding-min-md {
+  @include min-side-padding(2);
+}
+
+.l-side-padding-min-lg {
+  @include min-side-padding(3);
+}
+
+.l-side-padding-min-xl {
+  @include min-side-padding(4);
+}
+
+// The max side paddings
+// --------------------
+.l-side-padding-max-sm {
+  @include max-side-padding(1);
+}
+
+.l-side-padding-max-md {
+  @include max-side-padding(2);
+}
+
+.l-side-padding-max-lg {
+  @include max-side-padding(3);
+}
+
+.l-side-padding-max-xl {
+  @include max-side-padding(4);
+}
+
+// Min max side paddings
+// ---------------------
+.l-side-padding-sm-lg {
+  @include min-max-side-padding(1, 3);
+}

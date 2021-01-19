@@ -1,0 +1,18 @@
+{
+  "name": "@ctng/common",
+  "version": "5.0.1",
+  "peerDependencies": {
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@angular/platform-browser": "^10.0.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moemamoe/ctng.git",
+    "directory": "projects/ctng/common"
+  }
+}

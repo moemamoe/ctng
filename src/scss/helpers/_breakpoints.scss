@@ -1,0 +1,43 @@
+@import './map-helpers';
+// breakpoints of pure css grid
+$breakpoints: (
+  sm: 35.5em,
+  md: 48em,
+  lg: 64em,
+  xl: 80em
+);
+// 568, 768, 1024, 1280
+// The standard min-width media query
+@mixin min($breakpoint) {
+  @media screen and (min-width: #{get-map-value($breakpoints, $breakpoint)}) {
+    @content;
+  }
+}
+// A min breakpoint for manual values
+@mixin min-manual($bpEm) {
+  @media screen and (min-width: $bpEm) {
+    @content;
+  }
+}
+// The standard min-width media query
+@mixin max($breakpoint) {
+  @media screen and (max-width: get-max-br( $breakpoint)) {
+    @content;
+  }
+}
+// Min and max breakpoint
+@mixin min-max($min, $max) {
+  @media screen and (min-width: #{get-map-value($breakpoints, $min)}) and (max-width: get-max-br( $max )) {
+    @content;
+  }
+}
+// small-landscape
+@mixin small-landscape() {
+  @media screen and (max-height: get-map-value($breakpoints, sm)) and (orientation: landscape) {
+    @content;
+  }
+}
+@function get-max-br($breakpoint) {
+  $br: get-map-value($breakpoints, $breakpoint);
+  @return $br - 0.01;
+}

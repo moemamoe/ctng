@@ -1,0 +1,40 @@
+@import 'helpers/colors';
+
+.menu-container {
+  padding: 1rem 2rem;
+  color: text-color(secondary);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__header {
+  width: 100%;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid theme-color(primary);
+  text-align: center;
+}
+
+.menu__links {
+  padding-top: 1rem;
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.branding__logo {
+  width: 75px;
+}
+
+.branding__name {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,23 @@
+@import 'helpers/colors';
+
+$toolbarHeight: 64px;
+
+.navigation {
+  background-color: theme-color(secondary);
+}
+
+.layout {
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: $toolbarHeight;
+  background-color: theme-color(background);
+}
+
+.content {
+  padding-top: calc( 1.5rem + #{$toolbarHeight});
+  padding-bottom: 2rem;
+}

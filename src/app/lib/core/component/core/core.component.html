@@ -1,0 +1,37 @@
+<div markdown [src]="'assets/ctng/core/README.md'"></div>
+<div class="playground-container">
+  <h2>Playground</h2>
+  <div class="playground">
+    <div class="playground__item">
+      <h3>LoadingService</h3>
+      <div>
+        <span>
+          <strong>isLoading: {{ loadingData.loadingText }}</strong>
+        </span>
+        <button class="left__space" mat-raised-button (click)="toggleLoading(!loadingData.loading)">{{ loadingData.actionText }}</button>
+      </div>
+    </div>
+    <div class="playground__item">
+      <h3>LocalstorageService</h3>
+      <div>
+        <mat-form-field class="example-full-width">
+          <textarea #localstoragemessage matInput placeholder="Leave a comment"></textarea>
+        </mat-form-field>
+        <button class="left__space" mat-raised-button (click)="writeToLocalStorage()">Write message to local storage</button>
+      </div>
+    </div>
+    <div class="playground__item">
+      <h3>TimerService</h3>
+      <div>
+        <span>
+          <strong>timer number: {{ timerObs$ | async }}</strong>
+        </span>
+        <button class="left__space" mat-raised-button (click)="switchTimer()">Start timer</button>
+        <button class="left__space" mat-raised-button (click)="switchTimer(false)">Stop timer</button>
+        <mat-form-field class="example-full-width left__space">
+          <input matInput [(ngModel)]="timerIntervalSeconds" type="number" />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>

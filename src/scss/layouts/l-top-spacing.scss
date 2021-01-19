@@ -1,0 +1,123 @@
+@import './../helpers/spacing';
+
+// The normal side padding for all sizes
+// -------------------------------------
+.l-top-spacing {
+  @include min-top-spacing();
+}
+
+// The normal top spacing multiplicated with small factor
+// ---------------------------------------------------------
+.l-top-spacing-s {
+  @include min-top-spacing-s();
+}
+
+.l-top-spacing-s-min-sm {
+  @include min-top-spacing-s(1);
+}
+
+.l-top-spacing-s-min-md {
+  @include min-top-spacing-s(2);
+}
+
+.l-top-spacing-s-min-lg {
+  @include min-top-spacing-s(3);
+}
+
+.l-top-spacing-s-min-xl {
+  @include min-top-spacing-s(4);
+}
+
+// The normal top spacing multiplicated with small factor
+// ---------------------------------------------------------
+.l-top-spacing-l {
+  @include min-top-spacing-l();
+}
+
+.l-top-spacing-l-min-sm {
+  @include min-top-spacing-l(1);
+}
+
+.l-top-spacing-l-min-md {
+  @include min-top-spacing-l(2);
+}
+
+.l-top-spacing-l-min-lg {
+  @include min-top-spacing-l(3);
+}
+
+.l-top-spacing-l-min-xl {
+  @include min-top-spacing-l(4);
+}
+
+// The min side paddings
+// --------------------
+.l-top-spacing-min-sm {
+  @include min-top-spacing(1);
+}
+
+.l-top-spacing-min-md {
+  @include min-top-spacing(2);
+}
+
+.l-top-spacing-min-lg {
+  @include min-top-spacing(3);
+}
+
+.l-top-spacing-min-xl {
+  @include min-top-spacing(4);
+}
+
+// The max normal top spacing
+// --------------------
+.l-top-spacing-max-sm {
+  @include max-top-spacing(1);
+}
+
+.l-top-spacing-max-md {
+  @include max-top-spacing(2);
+}
+
+.l-top-spacing-max-lg {
+  @include max-top-spacing(3);
+}
+
+.l-top-spacing-max-xl {
+  @include max-top-spacing(4);
+}
+
+// The max small top spacing
+// --------------------
+.l-top-spacing-s-max-sm {
+  @include max-top-spacing-s(1);
+}
+
+.l-top-spacing-s-max-md {
+  @include max-top-spacing-s(2);
+}
+
+.l-top-spacing-s-max-lg {
+  @include max-top-spacing-s(3);
+}
+
+.l-top-spacing-s-max-xl {
+  @include max-top-spacing-s(4);
+}
+
+// The max large top spacing
+// --------------------
+.l-top-spacing-l-max-sm {
+  @include max-top-spacing-l(1);
+}
+
+.l-top-spacing-l-max-md {
+  @include max-top-spacing-l(2);
+}
+
+.l-top-spacing-l-max-lg {
+  @include max-top-spacing-l(3);
+}
+
+.l-top-spacing-l-max-xl {
+  @include max-top-spacing-l(4);
+}

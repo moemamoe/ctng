@@ -1,0 +1,114 @@
+/**
+* PAGE COLORS
+*/
+
+// Color definition
+// ----------------
+$white: #ffffff;
+$black: #000000;
+$gold: #d7b56d;
+$darkgrey: #3b3c3a;
+
+$lightblue: #353a8f;
+$blue: #151b6c;
+$brown: #b98a68;
+$red: #d74040;
+$green: #28963e;
+$backgrey: #f2f4f5;
+$grey: #323232;
+$lightgrey: rgba(8, 9, 34, 0.4);
+
+$disabledGrey: #e6e6e6;
+
+// Text Colors
+//
+// primary: main text color on page
+// secondary: alternative text color on page
+//
+// -----------
+$text-colors: (
+  primary: $darkgrey,
+  secondary: $gold,
+  third: $blue,
+  forth: $white,
+  disabled: $disabledGrey,
+);
+
+// Theme Colors
+//
+// background: main background color of page
+// primary: main theme color of components and page
+// secondary: alternativ theme color of components and page
+// third: third theme color of components and page for exceptions
+// error: error color of compoennts and page
+//
+// -----------
+$theme-colors: (
+  background: $white,
+  backgroundsecond: $backgrey,
+  primary: $gold,
+  secondary: $darkgrey,
+  third: $brown,
+  error: $red,
+  success: $green,
+);
+
+// Link Colors
+//
+// primary: main link text color
+// secondary: alternativ link text color
+// active: main hover, active and focus color of links
+// active-secondary: alternativ hover, active and focus color of links
+//
+// -----------
+$link-colors: (
+  primary: $darkgrey,
+  secondary: $lightgrey,
+  active: $lightblue,
+  active-secondary: $blue,
+  disabled: $lightgrey,
+);
+
+// Menu Colors
+//
+// background: background color of menu
+// menu-button: color of mobile menu button
+// text-primary: primary text color of menu
+// text-light: alternativ light color of menu
+// hover-primary: main hover, active and focus color of menu links
+// hover-light: alternativ light hover, active and focus color of menu links
+// overlay: overlay color of page, when mobile menu opens
+//
+// -----------
+$menu-colors: (
+  background: $white,
+  text-primary: $darkgrey,
+);
+
+// Header Colors
+//
+// background: background color of header
+// text: text color of header, when text is present
+//
+// -----------
+$header-colors: (
+  background: $white,
+  text: $darkgrey,
+);
+
+// Footer Colors
+//
+// background: background color of header
+// text: footer text color
+// hover: main hover, active and focus color of footer
+// seperator: alternativ light color of menu
+// copyright-background: copyright footer background color
+//
+// -----------
+$footer-colors: (
+  background: $white,
+  text: $blue,
+  hover: $white,
+  seperator: $white,
+  copyright-background: $white,
+);

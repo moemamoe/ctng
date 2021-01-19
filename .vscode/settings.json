@@ -1,0 +1,44 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "editor.renderWhitespace": "all",
+  "files.trimTrailingWhitespace": false,
+  // Defines space handling after opening and before closing non empty parenthesis
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  // Defines space handling after opening and before closing non empty brackets
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+  "editor.formatOnSave": true,
+  // Controls auto save of dirty files. Accepted values:  "off", "afterDelay", "onFocusChange" (editor loses focus), "onWindowChange" (window loses focus). If set to "afterDelay", you can configure the delay in "files.autoSaveDelay".
+  "files.autoSave": "off",
+  // Controls the delay in ms after which a dirty file is saved automatically. Only applies when "files.autoSave" is set to "afterDelay"
+  "files.autoSaveDelay": 1000,
+  "files.associations": {
+    //"*.twig": "html",
+    ".stylelintrc": "json"
+  },
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "dist/**": false,
+    "doc/**": true,
+    "coverage/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist/**": true,
+    "coverage/**": true
+  },
+  /**
+   * Due to crashes: https://github.com/Microsoft/vscode/issues/12042
+   */
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true
+  },
+  "vsicons.presets.angular": true,
+  "html.format.wrapLineLength": 140
+}

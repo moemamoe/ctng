@@ -1,0 +1,172 @@
+@import './../helpers/breakpoints';
+
+// hidden-xs
+@include max(sm) {
+  .l-visible-sm {
+    display: none;
+  }
+
+  .l-visible-md {
+    display: none;
+  }
+
+  .l-visible-lg {
+    display: none;
+  }
+
+  .l-visible-xl {
+    display: none;
+  }
+
+  .l-hidden-xs {
+    display: none;
+  }
+}
+
+// hidden-sm
+@include min-max(sm, md) {
+  .l-visible-xs {
+    display: none;
+  }
+
+  .l-visible-md {
+    display: none;
+  }
+
+  .l-visible-lg {
+    display: none;
+  }
+
+  .l-visible-xl {
+    display: none;
+  }
+
+  .l-hidden-sm {
+    display: none;
+  }
+}
+
+// hidden-min-sm
+@include min(sm) {
+  .l-hidden-min-sm {
+    display: none;
+  }
+}
+
+// hidden-max-sm
+@include max(sm) {
+  .l-hidden-max-sm {
+    display: none;
+  }
+}
+
+// hidden-md
+@include min-max(md, lg) {
+  .l-visible-xs {
+    display: none;
+  }
+
+  .l-visible-sm {
+    display: none;
+  }
+
+  .l-visible-lg {
+    display: none;
+  }
+
+  .l-visible-xl {
+    display: none;
+  }
+
+  .l-hidden-md {
+    display: none;
+  }
+}
+
+// hidden-min-md
+@include min(md) {
+  .l-hidden-min-md {
+    display: none;
+  }
+}
+
+// hidden-max-md
+@include max(md) {
+  .l-hidden-max-md {
+    display: none;
+  }
+}
+
+// hidden-lg
+@include min-max(lg, xl) {
+  .l-visible-xs {
+    display: none;
+  }
+
+  .l-visible-sm {
+    display: none;
+  }
+
+  .l-visible-md {
+    display: none;
+  }
+
+  .l-visible-xl {
+    display: none;
+  }
+
+  .l-hidden-lg {
+    display: none;
+  }
+}
+
+// hidden-min-lg
+@include min(lg) {
+  .l-hidden-min-lg {
+    display: none;
+  }
+}
+
+// hidden-max-lg
+@include max(lg) {
+  .l-hidden-max-lg {
+    display: none;
+  }
+}
+
+// hidden-xl
+@include min(xl) {
+  .l-visible-xs {
+    display: none;
+  }
+
+  .l-visible-sm {
+    display: none;
+  }
+
+  .l-visible-md {
+    display: none;
+  }
+
+  .l-visible-lg {
+    display: none;
+  }
+
+  .l-hidden-xl {
+    display: none;
+  }
+}
+
+// hidden-min-xl
+@include min(xl) {
+  .l-hidden-min-xl {
+    display: none;
+  }
+}
+
+// hidden-max-xl
+@include max(xl) {
+  .l-hidden-max-xl {
+    display: none;
+  }
+}

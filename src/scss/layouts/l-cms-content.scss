@@ -1,0 +1,68 @@
+@import './../colors';
+@import './../helpers/hover';
+
+// This is the layout for imported html from wordpress backend
+.l-cms-content {
+  max-width: 100%;
+  word-wrap: break-word;
+
+  ul,
+  ol {
+    // Shift all lists a bit
+    padding-left: 2em;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+
+  p:not(:last-child),
+  ul:not(:last-child),
+  ol:not(:last-child) {
+    // To get a similar look as in wordpress, we use some bottom padding
+    padding-bottom: 0.8em;
+  }
+
+  h1 {
+    padding-top: 1.4em;
+    padding-bottom: 1.2em;
+  }
+
+  h2 {
+    padding-top: 1.2em;
+    padding-bottom: 1em;
+  }
+
+  h3 {
+    padding-top: 1em;
+    padding-bottom: 0.8em;
+  }
+
+  h4 {
+    padding-top: 0.8em;
+    padding-bottom: 0.6em;
+  }
+
+  h5 {
+    padding-top: 0.6em;
+    padding-bottom: 0.4em;
+  }
+
+  &.cms-secondary-link {
+    a {
+      @include hoverColor(link-color(secondary), link-color(active-secondary));
+    }
+  }
+
+  .aligncenter {
+    margin: auto;
+  }
+
+  li {
+    padding-bottom: 0.5rem;
+  }
+
+  li:first-child {
+    padding-top: 0.5rem;
+  }
+}

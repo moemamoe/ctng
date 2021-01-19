@@ -1,0 +1,7 @@
+@function get-map-value( $color-map, $key) {
+  @if map-has-key($color-map, $key) {
+    @return map-get($color-map, $key);
+  }
+  @error 'Unknown `#{$key}` in `#{$color-map}`.';
+  @return null;
+}
