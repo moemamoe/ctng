@@ -86,4 +86,4 @@ In some cases, we need to develop, debug or test this library within an Angular 
 - `npm lint:libs`: Lints all libraries in this repo
 - `npm commit`: Commit any changes via conventional commit messages
 - `npm semver`: Checks all versions of all libraries, increases the versions if necessary and tags & pushes them back to repo
-- `npm deploy`: Publishes all libraries to npm registry
+- `npm deploy`: Publishes all libraries to the npm registry
