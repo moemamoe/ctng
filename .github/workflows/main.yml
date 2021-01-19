@@ -30,3 +30,12 @@ jobs:
           
       - name: Install npm dependencies
         run: npm install
+      
+      - name: Linting libraries
+        run: npm run lint:libs
+      
+      - name: Building libraries
+        run: npm run build:libs:release
+      
+      - name: Testing libraries
+        run: npm run test:libs
