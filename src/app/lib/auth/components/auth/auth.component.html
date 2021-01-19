@@ -1,0 +1,42 @@
+<div markdown [src]="'assets/ctng/auth/README.md'"></div>
+<h2>Playground</h2>
+<div>
+  <h3>Test Pages</h3>
+  <div class="pages">
+    <button mat-raised-button [routerLink]="['protected']">Navigate to Protected page</button>
+    <button mat-raised-button [routerLink]="['public']">Navigate to Public page</button>
+  </div>
+</div>
+
+<div>
+  <h3>Login</h3>
+  <div *ngIf="isAuthorized">
+    <p style="background-color: lightgreen;">
+      You are currently logged in. You can navigate to the protected page, but not to the public one (because it has a PublicGuard).
+    </p>
+    <p>Time until expiration: {{ expDuration }} Seconds</p>
+    <p>JWT expiration date: {{ expDate | date: 'HH:mm:ss' }}</p>
+    <p>Current time: {{ curDate | date: 'HH:mm:ss' }}</p>
+  </div>
+  <p *ngIf="!isAuthorized">
+    You are currently logged out. You can navigate to the public page, but not to the protected one. Login to get to the proteced page
+    (admin, secret).
+  </p>
+  <form class="login__form" [formGroup]="loginForm">
+    <mat-form-field>
+      <input [type]="'text'" matInput placeholder="User Name" formControlName="username" required autocomplete="username" />
+      <mat-error *ngIf="loginForm.controls.username.hasError('username')">
+        User
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input [type]="'password'" matInput placeholder="Passwort" formControlName="password" required autocomplete="current-password" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!loginForm.valid" (click)="submit()">
+      Sign In
+    </button>
+    <button mat-raised-button color="warn" class="warn-button" [disabled]="!isAuthorized" (click)="logout()">
+      Log Out
+    </button>
+  </form>
+</div>

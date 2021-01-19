@@ -1,0 +1,13 @@
+{
+  "lerna": "3.4.3",
+  "packages": [
+    "projects/*",
+    "projects/ctng/*"
+  ],
+  "version": "5.0.0",
+  "command": {
+    "version": {
+      "allowBranch": "master"
+    }
+  }
+}

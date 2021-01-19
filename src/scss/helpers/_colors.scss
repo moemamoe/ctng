@@ -1,0 +1,30 @@
+@import './map-helpers';
+@import './../colors';
+
+@function text-color($key) {
+  @return get-map-value($text-colors, $key);
+}
+
+@function theme-color($key) {
+  @return get-map-value($theme-colors, $key);
+}
+
+@function link-color($key) {
+  @return get-map-value($link-colors, $key);
+}
+
+@function menu-color($key) {
+  @return get-map-value($menu-colors, $key);
+}
+
+@function header-color($key) {
+  @return get-map-value($header-colors, $key);
+}
+
+@function footer-color($key) {
+  @return get-map-value($footer-colors, $key);
+}
+
+@function mdc-theme-color($key) {
+  @return get-map-value($mdc-theme-colors, $key);
+}

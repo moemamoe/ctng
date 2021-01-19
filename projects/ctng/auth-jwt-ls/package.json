@@ -1,0 +1,12 @@
+{
+  "name": "@ctng/auth-jwt-ls",
+  "version": "5.0.0",
+  "peerDependencies": {
+    "@angular/core": "^10.0.0",
+    "@ctng/core": "^5.0.0",
+    "jwt-decode": "^2.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

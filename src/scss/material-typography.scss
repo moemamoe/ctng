@@ -1,0 +1,13 @@
+/**
+* MATERIAL TYPOGRAPHY
+*/
+$default-typography: mat-typography-config(
+  $font-family: '"Open Sans", sans-serif',
+);
+
+/**
+* ADD TYPOGRAPHY
+*/
+// basic material theming with Frank Ruhr Font
+@include angular-material-typography($default-typography);
+

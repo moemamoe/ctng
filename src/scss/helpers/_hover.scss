@@ -1,0 +1,59 @@
+@mixin hoverColor($color, $hoverColor, $colorProp: color, $preventStickyHover: false) {
+  #{$colorProp}: $color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    #{$colorProp}: $hoverColor;
+    cursor: pointer;
+  }
+
+  @if $preventStickyHover {
+    @media (hover: none) {
+      // media query to prevent sticky hover on mobile devices
+      &:hover,
+      &:focus,
+      &:active {
+        #{$colorProp}: $color;
+      }
+    }
+  }
+}
+
+// Sets the property in the nested class or directly if no nested class is provided
+// --------------------------------------------------------------------------------
+@mixin getNestedProperty($nestedClass, $property, $propertyValue) {
+  @if ($nestedClass) {
+    #{$nestedClass} {
+      #{$property}: $propertyValue;
+      transition: #{$property} 0.2s;
+    }
+  } @else {
+    #{$property}: $propertyValue;
+    transition: #{$property} 0.2s;
+  }
+}
+
+// Set a property and its hover state either on the hover object itself or on a nested sub element of the hover element
+// --------------------------------------------------------------------------------------------------------------------
+@mixin hoverProp($property, $propertyValue, $propertyHoverValue, $nestedClass: null, $preventStickyHover: false) {
+  @include getNestedProperty($nestedClass, $property, $propertyValue);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include getNestedProperty($nestedClass, $property, $propertyHoverValue);
+    cursor: pointer;
+  }
+
+  @if $preventStickyHover {
+    @media (hover: none) {
+      // media query to prevent sticky hover on mobile devices
+      &:hover,
+      &:focus,
+      &:active {
+        @include getNestedProperty($nestedClass, $property, $propertyValue);
+      }
+    }
+  }
+}

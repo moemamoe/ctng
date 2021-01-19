@@ -1,0 +1,25 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@ctng/core": ["dist/ctng/core/ctng-core", "dist/ctng/core"],
+      "@ctng/common": ["dist/ctng/common/ctng-common", "dist/ctng/common"],
+      "@ctng/wordpress": ["dist/ctng/wordpress/ctng-wordpress", "dist/ctng/wordpress"],
+      "@ctng/testing": ["dist/ctng/testing/ctng-testing", "dist/ctng/testing"],
+      "@ctng/localization": ["dist/ctng/localization/ctng-localization", "dist/ctng/localization"],
+      "@ctng/auth": ["dist/ctng/auth/ctng-auth", "dist/ctng/auth"],
+      "@ctng/auth-jwt-ls": ["dist/ctng/auth-jwt-ls/ctng-auth-jwt-ls", "dist/ctng/auth-jwt-ls"]
+    }
+  }
+}

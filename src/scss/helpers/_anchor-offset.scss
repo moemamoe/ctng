@@ -1,0 +1,10 @@
+@mixin anchor-offset( $offsetPx ) {
+  &::before {
+    height: $offsetPx;
+    margin-top: -$offsetPx;
+    display: block;
+    pointer-events: none;
+    visibility: hidden;
+    content: ' ';
+  }
+}

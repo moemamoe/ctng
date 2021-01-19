@@ -1,0 +1,12 @@
+{
+  "name": "@ctng/testing",
+  "version": "5.0.0",
+  "peerDependencies": {
+    "@angular/core": "^10.0.0",
+    "@angular/platform-browser": "^10.0.0",
+    "jasmine-core": "^3.5.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

@@ -1,0 +1,52 @@
+$defaultConfig: (
+  primary: #d7b56d
+);
+
+
+/**
+* MAIN THEMING
+*/
+@mixin ct-theme($config: $defaultConfig) {
+
+  @if $config {
+    $primary: get-map-value($config, primary);
+  }
+
+  @include ct-loading-bar($config);
+  @include ct-loading-spinner($config);
+}
+
+/**
+* LOADING BAR THEMING
+*/
+@mixin ct-loading-bar($config: null) {
+  .ct-loading-bar {
+    background-color: get-map-value($config, primary);
+  }
+}
+
+
+/**
+* LOADING SPINNER THEMING
+*/
+@mixin ct-loading-spinner($config: null) {
+  .ct-loading-spinner {
+    div {
+      &::after {
+        background: get-map-value($config, primary);
+      }
+    }
+  }
+}
+
+
+/**
+* HELPER FUNCTIONS
+*/
+@function get-map-value( $map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  }
+  @error 'Unknown `#{$key}` in `#{$map}`.';
+  @return null;
+}

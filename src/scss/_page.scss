@@ -1,0 +1,65 @@
+// Header Variables
+// ----------------
+$header-height: 50px;
+$header-height-l: 70px;
+$header-height-l-unpinned: 50px;
+$header-breakpoint: lg;
+
+// Header Variables
+// ----------------
+$footer-height: 90px;
+
+// Menu Variables
+// --------------
+$menu-height: 50px;
+$menu-dropdown-max-height: 250px;
+
+/**
+* SIDE PADDING
+*
+* see: client/base/scss/layouts/l-side-padding.scss
+*/
+
+// Side Padding: Defines the standard width of the page and components
+// -------------------------------------------------------------------
+$side-padding-sm: 20px;
+$side-padding-md: 5%;
+$side-padding-lg: 10%;
+$side-padding-xl: 12%;
+$side-padding: 15%;
+
+/**
+* END SIDE PADDING
+*/
+
+/**
+* SPACING
+*
+* see: client/base/scss/layouts/l-top-spacing.scss
+* see: client/base/scss/layouts/l-bottom-spacing.scss
+*/
+
+// Top Spacing: Defines the standard spacing in top direction of components
+// ------------------------------------------------------------------------
+$top-spacing-sm: 2rem;
+$top-spacing-md: 2rem;
+$top-spacing-lg: 2.5rem;
+$top-spacing-xl: 3rem;
+$top-spacing: 3.5rem;
+
+// Bottom Spacing: Defines the standard spacing in bottom direction of components
+// ------------------------------------------------------------------------------
+$bottom-spacing-sm: 2rem;
+$bottom-spacing-md: 2rem;
+$bottom-spacing-lg: 2.5rem;
+$bottom-spacing-xl: 3rem;
+$bottom-spacing: 3.5rem;
+
+// Spacing Factors: Factor for Spacing, which is applied to small and large Spacing classes
+// ----------------------------------------------------------------------------------------
+$spacing-s-factor: 0.5;
+$spacing-l-factor: 2;
+
+/**
+* END SPACING
+*/

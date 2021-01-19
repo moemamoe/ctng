@@ -1,0 +1,33 @@
+/**
+* PAGE TYPOGRAPHY
+*/
+
+// Font families
+// -------------
+$primary: 'Open Sans', sans-serif;
+
+// Global default variable for font-sizes of text
+// ----------------------------------------------
+$font-size-normal: 14px;
+$font-line-height: 1.6;
+
+// Global default variables for headers
+// ------------------------------------
+$font-size-h1: 30px;
+$font-line-height-h1: 33px;
+$font-size-h2: 25px;
+$font-size-h3: 20px;
+$font-size-h4: 18px;
+$font-weight-h: bold;
+
+// Global variables for html document in precent for each breakpoint
+// -----------------------------------------------------------------
+$html-font-size-md: 100%;
+$html-font-size-lg: 105%;
+$html-font-size-xl: 110%;
+$html-font-size: 120%;
+
+// Global font size variables for menu
+// -----------------------------------
+$fontsize-menu-mobil: 1.3rem;
+$fontsize-menu-desktop: 1rem;

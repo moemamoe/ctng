@@ -1,0 +1,30 @@
+$position-all: 'all';
+$position-left: 'left';
+$position-top: 'top';
+$position-right: 'right';
+$position-bottom: 'bottom';
+$position-top-bottom: 'top-bottom';
+$position-right-left: 'right-left';
+
+@function getShadow($h-offset, $v-offset, $blur, $spread, $color) {
+  @return $h-offset $v-offset $blur $spread $color;
+}
+
+@mixin shadow($position: 'all', $offset: 0px, $blur: 3px, $spread: -1px, $color: rgba(0, 0, 0, 0.2)) {
+  @if $position == $position-all {
+    box-shadow: getShadow(0, $offset, $blur, $spread, $color), getShadow($offset, 0, $blur, $spread, $color),
+      getShadow(0, -$offset, $blur, $spread, $color), getShadow(-$offset, 0, $blur, $spread, $color);
+  } @else if $position == $position-left {
+    box-shadow: getShadow(-$offset, 0, $blur, $spread, $color);
+  } @else if $position == $position-top {
+    box-shadow: getShadow(0, -$offset, $blur, $spread, $color);
+  } @else if $position == $position-right {
+    box-shadow: getShadow($offset, 0, $blur, $spread, $color);
+  } @else if $position == $position-bottom {
+    box-shadow: getShadow(0, $offset, $blur, $spread, $color);
+  } @else if $position == $position-top-bottom {
+    box-shadow: getShadow(0, $offset, $blur, $spread, $color), getShadow(0, -$offset, $blur, $spread, $color);
+  } @else if $position == $position-right-left {
+    box-shadow: getShadow($offset, 0, $blur, $spread, $color), getShadow(-$offset, 0, $blur, $spread, $color);
+  }
+}
