@@ -27,3 +27,6 @@ jobs:
         uses: actions/setup-node@v2.1.4
         with:
           node-version: '12.14.1'
+          
+      - name: Install npm dependencies
+        run: npm install
