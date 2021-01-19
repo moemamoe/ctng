@@ -9,5 +9,10 @@
   "license": "MIT",
   "dependencies": {
     "tslib": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moemamoe/ctng.git",
+    "directory": "projects/ctng/wordpress"
   }
 }
