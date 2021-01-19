@@ -1,6 +1,6 @@
 {
   "name": "@ctng/testing",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "peerDependencies": {
     "@angular/core": "^10.0.0",
     "@angular/platform-browser": "^10.0.0",
